@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>下拉式選單範例</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script language="javascript">
+            /*
+             DOM向靜態元件取值和給值:
+             判斷結果:<span id="sp">123</span> getElementById("sp")
+             取值:
+             let n=document.getElementById("sp").innerHTML;
+             給值:
+             document.getElementById("sp").innerHTML="及格"
+    
+            */
+           function fun1(){
+                let score =prompt("請輸入分數")
+                if (score>=90){
+                    document.getElementById("s1").innerHTML="<br>分數是甲";
+                }else if (score>=80){
+                    document.getElementById("s1").innerHTML="<br>分數是乙";
+                }else if (score>=70){
+                    document.getElementById("s1").innerHTML="<br>分數是丙";
+                }else if (score>=60){
+                    document.getElementById("s1").innerHTML="<br>分數是丁";
+                }else {
+                document.getElementById("s1").innerHTML="<br>分數是不及格";
+                }
+            }
+            function fun2(){
+                
+                let num = document.getElementById("t").value;
+                if (num%2===0){
+                   document.getElementById("s2").innerHTML="<br>偶數"; 
+                }else {
+                   document.getElementById("s2").innerHTML="<br>奇數"; 
+                }
+                
+            }
+            function fun3(){
+                let img1= document.getElementById("img").src;
+                document.getElementById("img").src="images/02.jpg";
+            }
+        fun2()
+            function fun4(){
+                let k = document.getElementById("sel").value;
+                if (parseInt(k)===1){
+                    document.getElementById("img2").src="images/spring.jpg";
+                }else if (parseInt(k)===2){
+                    document.getElementById("img2").src="images/summer.jpg";
+                }else if (parseInt(k)===3){
+                    document.getElementById("img2").src="images/fall.jpg";
+                }else if (parseInt(k)===4) {
+                    document.getElementById("img2").src="images/winter.jfif";
+                }  
+            }
+            
+        </script>
+    </head>
+    <body>
+        <button id="btn" onclick="fun1()">確認分數</button>
+        <span id="s1"></span>
+        <br><input type="text" id="t" size="20" placeholder="請輸入數字"/>
+        <span id="s2"></span>
+        <br><img src="images/01.jpg" id="img" width="500" height="400" alt="南橫三星" onclick="fun3()"/>
+        <table border="3px" >
+            <tr style=" background-color:#FFB3FF"><td colspan="3">四季花卉</td></tr>
+            <tr><td>請選擇季節</td>
+                <td>
+                <select id="sel">
+                    <option value="1">Spring</option>
+                    <option value="2">Summer</option>
+                    <option value="3">Fall</option>
+                    <option value="4">Winter</option>
+                </select>
+                </td>
+                <td><button onclick="fun4()">確定</button></td>
+            </tr>
+            <tr><td colspan="3"><img src="images/spring.jpg" width="700" height="600" alt="flower picture" id="img2"/></td></tr>
+        </table>
+        
+    </body>
+</html>
