@@ -1,4 +1,3 @@
-</> Markdown
 # Practice files
 ## Git control & javascript notes
 - jsnote.html file connects other javascript notes
