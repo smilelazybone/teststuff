@@ -2,7 +2,7 @@
 ## Git control & javascript notes
 - jsnote.html file connects other javascript notes
 - images: pictures
-- index.html contains git cmd
+- index.html connects other notes
 ### common git initialize
 ```csharp
 git init
