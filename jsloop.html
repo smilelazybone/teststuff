@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>視覺化表格</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script language="javascript">
+            function fun1(){
+                let start = document.getElementById("t1").value;
+                let end = document.getElementById("t2").value;
+                let plus = document.getElementById("t3").value;
+                let sum=0;
+                let i= parseInt(start);
+                for(;;){
+                    if(i>parseInt(end)){
+                        break;
+                    }
+                    sum=parseInt(sum)+i;
+                    i=i+parseInt(plus);
+                }
+                document.getElementById("t4").value=sum;
+            }
+            function fun2(){
+                document.getElementById("t1").value="";
+                document.getElementById("t2").value="";
+                document.getElementById("t3").value="";
+                document.getElementById("t4").value="";
+            }
+        </script>
+    </head>
+    <body>
+        <table border="2">
+            <tr><td colspan="2" width="300" bgcolor="#FFD1A4" >數字迴圈計算</td></tr>
+            <tr><td>開始值</td><td><input type="text" id="t1" name="t1" size="15"></td></tr>
+            <tr><td>結束值</td><td><input type="text" id="t2" name="t2" size="15"></td></tr>
+            <tr><td>增量值</td><td><input type="text" id="t3" name="t3" size="15"></td></tr>
+            <tr><td>計算結果</td><td><input type="text" id="t4" name="t4" size="15"></td></tr>
+            <tr><td><button id="btn1" onclick="fun1()">執行</button></td><td><button id="btn2" onclick="fun2()">清除</button></td></tr>
+        </table>
+    </body>
+</html>
+<!-- 
+    while迴圈
+    while(條件式)
+    {
+        循環區塊
+    }
+    1.開始值
+    2.終止值
+    3.增量值
+ex1:
+let i=1; 開始值
+while(i<=10) 終止值
+{
+    i=i+1 增量值
+}
+
+
+
+
+    do....while
+    do{
+        循環區塊
+    }while(條件式);
+    ex1:
+    let h=1; 開始值
+    do {
+        [程式區塊]
+        h=h+1 >>>增量值
+    }while(h<=10); >>>終止值
+    
+for(;;) >>將開始值，結束值變數丟到外面去
+{
+    .....
+}
+1. while是先判斷再執行，do....while是先執行再判斷。
+2. do...while條件不成立時，至少執行一圈。
+-->

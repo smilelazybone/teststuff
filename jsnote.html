@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>一維陣列</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script language="javascript">
+            function fun1(){
+                const arrFive=[10,20,30,40,50];
+                let lengArr = arrFive.length;
+                document.getElementById("d1").innerHTML=lengArr;
+            }
+            function fun2(){
+                const arrFive=[10,20,30,40,50];
+                let lenArr = arrFive.length;
+                let str="";
+                for(let i=lenArr-1; i>=0; i--){
+                    
+                    str = str+arrFive[i]+"&nbsp;&nbsp;&nbsp;&nbsp;";
+                }
+                document.getElementById("d2").innerHTML=str;
+            }
+            function fun3(){
+                const arrFive=[10,20,30,40,50];
+                let lenArr = arrFive.length;
+                let str="";
+                for (let i=0; i<lenArr; i++){
+                    str = str+arrFive[i]+"&nbsp;&nbsp;&nbsp;&nbsp;";
+                }
+                document.getElementById("d3").innerHTML=str;
+            }
+            function fun4(){
+                const arrFive=[10,20,30,40,50];
+                let lenArr = arrFive.length;
+                let sum=0;
+                for(let i=0; i<lenArr; i++){
+                    sum=sum+arrFive[i];
+                }
+                document.getElementById("d4").innerHTML=sum;
+            }
+            function fun5(){
+                const arr=[10,20,30,40,50];
+                let lenArr = arr.length;
+                let str="";
+                let i=0;
+                while(i<lenArr){
+                    str=str+arr[i]+"&nbsp;&nbsp;&nbsp;&nbsp;";
+                    i++;
+                }
+                document.getElementById("d5").innerHTML=str;
+            }
+            function fun6(){
+                const a=new Array(10,21,30,41,50,61,70,83,98,100);
+                let lenA = a.length;
+                let even="";
+                let odd="";
+                for(let i=0; i<lenA; i++){
+                    if(a[i]%2===0){
+                        even=even+a[i]+"&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }else{
+                        odd=odd+a[i]+"&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }
+                }
+                document.getElementById("d6").innerHTML=even;
+                document.getElementById("d7").innerHTML=odd;     
+            }
+            function fun7(){
+                const a=new Array("小魔女Do","小魔女Re","小魔女Mi","芙莉蓮","鄧不力多","石內卜","賽莉耶","哈利波特");
+                let lenA = a.length;
+                let q=prompt("請輸入魔法師名字");
+                let b=false;
+                for(let i=0; i<lenA; i++){
+                    if(a[i]===q){
+                        b=true;
+                        break
+                    }
+                }
+                if(b===true){
+                    document.getElementById("d8").innerHTML="有此位魔法師";
+                }else {
+                    document.getElementById("d8").innerHTML="找不到此人";
+                }
+            }
+            function fun8(){
+                const a=new Array("小魔女Do","小魔女Re","小魔女Mi","芙莉蓮","鄧不力多","石內卜","賽莉耶","哈利波特");
+                let lenA=a.length;
+                let str="";
+                let i=0;
+                do{
+                    str=str+a[i]+"&nbsp;&nbsp;&nbsp;&nbsp;";
+                    i++;
+                }while(i<lenA);
+                document.getElementById("d9").innerHTML=str;
+            }
+        </script>
+    </head>
+    <body>
+        <button id="btn1" onclick="fun1()">一維陣列長度</button>
+        <div id="d1"></div>
+        <button id="btn2" onclick="fun2()">陣列for逆迴圈排列</button>
+        <div id="d2"></div>
+        <button id="btn3" onclick="fun3()">陣列for正迴圈排列</button>
+        <div id="d3"></div>
+        <button id="btn4" onclick="fun4()">陣列元素相加總合</button>
+        <div id="d4"></div>
+        <button onclick="fun5()">陣列while正迴圈排列</button>
+        <div id="d5"></div>
+        <button onclick="fun6()">元素分奇偶數排列</button>
+        <p>偶數元素</p>
+        <div id="d6"></div>
+        <p>奇數元素</p>
+        <div id="d7"></div>
+        <button onclick="fun7()">魔法師名字字串比對</button>
+        <div id="d8"></div>
+        <button onclick="fun8()">使用do...while列出陣列</button>
+        <div id="d9"></div>
+        
+        <a href="jsnote2.html">下拉式選單範例</a>
+        <a href="jsloop.html">loop範例</a>
+    </body>
+</html>
+<!-- 
+JS一維陣列:
+1.int, float, boolean,string
+2.一個陣列物件只能用一種型態
+3.運算過程中不可隨時更改大小  >>>要增減元素資料需要運算完成。
+
+
+1. 直接表示法: 由值來決定記憶體空間大小
+const 陣列名稱=new Array(值1,值2,值3,值4); 標準物件寫法
+const 陣列名稱=[值1,值2,值3,值4] 簡略寫法
+
+2.間接表示法: 先決定空間再給值
+const 陣列名稱=new array();
+
+
+計算元素量:
+let 變數=陣列名稱.length;
+
+代表元素:
+陣列名稱[索引住址]
+給值
+a[0]=10
+a[1]=20
+a[2]=30
+取值
+a[0]
+a[1]
+a[2]
+a[3]
+
+學習陣列重點:
+1.正向輸出
+2.逆向輸出
+3.偶數值輸出
+4.奇數值輸出
+5.偶數索引值輸出
+6.奇數索引值輸出
+7.元素四則運算
+8.查詢.過濾功能
+9.演算法
+-->
