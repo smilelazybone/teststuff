@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>while範例</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script language="javascript">
+            function fun1(){
+                let c=document.getElementById("d1");
+                let t="";
+                let i=1;
+                while(i<=10){
+                    t=t+i;
+                    i=i+1;
+                }
+                c.innerHTML=t;
+            }
+            function fun2(){
+                let c=document.getElementById("d2");
+                let sum=0;
+                let i=0;
+                while(i<=100){
+                     sum=sum+i;
+                     i=i+1;
+                }
+                c.innerHTML=sum;
+            }
+            function fun3(){
+                let c=document.getElementById("d3");
+                let t="";
+                let i=1;
+                do {
+                    t=t+i;
+                    i=i+2;
+                }while(i<=10);
+                c.innerHTML=t;
+            }
+        </script>
+    </head>
+    <body>
+        <button id="btn1" onclick="fun1()">while迴圈</button>
+        <div id="d1"></div>
+        <button id="btn2" onclick="fun2()">while迴圈(1-100)</button>
+        <div id="d2"></div>
+        <button id="btn3" onclick="fun3()">do while迴圈</button>
+        <div id="d3"></div>
+    </body>
+</html>
