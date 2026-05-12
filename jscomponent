@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script language="javascript">
+            function fun1(){
+                let t = prompt("輸入成績");
+                alert(t);
+            }
+            function fun2(){
+                let t = confirm("確定要刪除此筆資料嗎?");
+                alert(t);
+            }
+            function fun3(){
+                window.open(url="images/02.jpg","helloworld","width=500px, height=300px,top=100px, left=100px");
+            }
+            function fun4(){
+                window.location.href = 'https://www.google.com';
+            }
+        </script>
+    </head>
+    <body>
+        <!--  
+        JavaScript基本UI元件
+        1. alert("資料") >>輸出對話方塊
+        2. prompt("提示文字") >>輸入對話方塊 int,float,string,char,boolean
+        3. confirm("提示文字") >>確認對話方塊
+        4. window.open(url,"名稱","屬性集合") >>開啟小視窗
+           url可以是1.外部網址 2.內部網址 3.圖片 4.視訊
+        p.s.
+        location.href= url; 用途:1.選單 2.路由 3.網頁系統架構
+        url可以是外部網址、內部網址、圖片、視訊
+         -->
+         <a href="javascript:void;" onclick='fun1()'>對話方塊</a>
+         <a href="javascript:void;" onclick='fun2()'>確認方塊</a>
+         <a href="javascript:void;" onclick='fun3()'>開啟視窗</a>
+         <a href="javascript:void;" onclick='fun4()'>跳轉到外部網站</a>
+    </body>
+</html>
